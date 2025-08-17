@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=apartment" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="storemain.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body onload="updateCategoryCountsBlue()">
+
+    <title>Document</title>
+<style>
+
+/******pag1**/
+
+
+
+
+
+
+
+
+
+
+
+
+.drop{
+
+    width: 120px;
+    height: 30vh;
+background-color:rgb(236, 235, 230) ;
+color: black;
+}
+.drop p{
+    padding: 5px;
+text-align: center;
+font-size: 20px;
+}
+.drop p:hover ,button:hover
+{
+
+    background-color: rgb(233, 233, 238);
+    cursor: pointer;
+}
+button
+
+{
+
+background-color: rgb(237, 243, 243);
+color: black;
+border: none;
+border-radius: 5px;
+
+}
+button img{
+font-size: 50px;
+		 content: '';
+    position: absolute;
+    top: 90px;
+    left: -30px;
+   
+    height: 100px;
+    width: 100px;
+   
+}
+#btclose{
+    position: absolute;
+    left: 125px;
+}
+.hide{
+    display: none;
+}
+
+
+.fa-regular{
+
+font-size: 80px;
+margin: 30px 30px;
+padding: 70px 20px;
+position: absolute;
+
+
+
+}
+.fa-heart{
+
+background: blue;
+width: 10%;
+height: 15%;
+border: #135a91;
+border-radius: 9999px;
+}
+
+#search{
+display: inline-block;
+   
+width: 26%;
+    height: 190%;
+    border: none;
+    background-color: #56555842;
+    border-radius: 19px;
+    border-color: rgba(242, 240, 248, 0.322);
+    color: #ffffff;
+
+      border: 1px solid rgb(59 130 246 / .5);
+}
+small{
+
+font-size: 60px;
+
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 500px ;
+color: #135a91;
+
+}
+small p{
+
+margin-left: 350px ;
+    color: darkgray;
+}
+.proudct{
+
+
+
+  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#btn{
+width: 40px;
+height: 40px;
+border: none;
+
+position: fixed;
+bottom: 10px;
+right: 10px;
+  cursor: pointer;
+ background-color: blue;
+background-image: url(IP/scroll.png);
+background-size: 10px 10px;
+background-repeat: no-repeat;
+border-radius: 99999px;
+color: rgba(216, 211, 211, 0.555);
+background-position: bottom;
+}
+#eng{
+position: relative;
+margin-right: 1000px;
+width: 100px;
+height: 50px;
+bottom: -30px;
+border-radius: 9999px;
+border: 1px solid rgba(11, 12, 31, 0.603);
+background-color: #135a9100;
+color: #ffffff;
+font-size: large;
+
+}
+#eng:hover{
+
+background-color: #135a915d;
+
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button id="btn" >اعلى الصفحة </button>  
+
+
+    <header>        <div class="container">
+<div class="box head">
+    <!--header start-->
+<div id="navbar">
+    
+<img src="img/logo.png" alt="logo">
+<div class="contanier">
+<ul>
+<li>
+    <input type="search" name="search" id="search" placeholder="ابحث عن المنتجات">
+<a href="#home">الرئيسية</a>
+<a href="proudcts main.html">المنتجات</a>
+<a href="#about">من نحن</a>
+<a href="#gallery">شركائنا</a>
+<a href="#sli ">تواصل معنا</a>
+
+</li>
+</ul>
+</div>
+</div>
+
+<div class="content">
+
+ <!----
+<div class="slideshow-container">
+  <img src="IP/th1.jpg" class="slide active" />
+  <img src="IP/th.jpg" class="slide" />
+  <img src="IP/t11.png" class="slide" />
+  <img src="IP/th5.png" class="slide" />
+
+  <div class="controls">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
+
+  <div class="dots" id="dotsContainer"></div>
+</div>
+-->
+<h1>مرحبا بكم في   <span class="primary-text">مؤسسة ابو عكرمة</span>  </h1>
+<p class="tex">للتطوير العقاري ومواد البناء</p>
+<p>هنا ستجد خيارك الامثل في مواد البناء والعقارات</p>
+<a href="section2.html" id="mzaya" class="btn btn-primary"> مزايا الشركة</a>
+
+<a href="#proudct" id="mzaya2" class="btn btn-primary">  تصفح المنتجات</a>
+<!----
+<img src="img/serv9.jpg" alt="" width="35%" height="40%">
+<span class="material-symbols-outlined">
+apartment
+</span>-->
+</div></div>
+    </div>
+    </header>
+    
+<section class="proudct" id="proudct">
+<small>العروض الخاصة
+
+    <p>يتوفر لدينا عدة عروض مميزة </p>
+</small>
+
+<div id="productCountBlue" class="productCountBlue">عدد المعروض: <span id="visibleCountBlue">0</span></div>
+
+
+<div class="filterBarBlue">
+  <label>الفئة:</label>
+  <select id="categoryFilterBlue" onchange="applyCombinedFiltersBlue()">
+    <option value="all">الكل</option>
+    <option value="عدد صناعية">عدد صناعية</option>
+    <option value="عدد يديويه">عدد يديويه</option>
+    <option value="دهانات"> دهانات</option>
+     <option value="الأدوات الكهربائية"> الأدوات الكهربائية</option>
+    <option value="الادوات الصحية ">الادوات الصحية </option>
+    <option value="الواصق والعوازل">الواصق والعوازل</option>
+        <option value="مضخات"> مضخات</option>
+
+  </select>
+
+  <label>السعر:</label>
+  <select id="priceFilterBlue" onchange="applyCombinedFiltersBlue()">
+    <option value="all">الكل</option>
+    <option value="lt10">أقل من 10 د</option>
+    <option value="10to15">10 - 15 د</option>
+    <option value="gt15">أكثر من 15 د</option>
+  </select>
+</div>
+
+<div class="categoryMenuWrapperBlue">
+  <button id="toggleCategoryMenuBlue">📂 الأقسام</button>
+  <ul id="categoryListBlue" class="categoryListBlue hide">
+    <!-- القائمة يتم ملؤها من JavaScript -->
+  </ul>
+</div>
+
+
+
+
+  <!-- أيقونة السلة -->
+  <div class="cartIconBlue" id="cartIconBlue">
+    🛒 <span id="itemCountBlue">0</span>
+  </div>
+
+  <!-- سلة المشتريات -->
+  <div class="shoppingCartBlue" id="shoppingCartBlue">
+    <h3>سلة المشتريات</h3>
+    <table id="cartTableBlue">
+      <thead>
+        <tr>
+          <th>صورة</th><th>منتج</th><th>السعر</th><th>حذف</th>
+        </tr>
+      </thead>
+      <tbody id="cartBodyBlue"></tbody>
+    </table>
+    <div class="totalSectionBlue">الإجمالي: <span id="totalAmountBlue">0</span> د</div>
+
+    <!-- نموذج معلومات -->
+    <div class="formSectionBlue">
+      <input type="text" id="clientNameBlue" placeholder="الاسم" required>
+      <input type="tel" id="clientPhoneBlue" placeholder="رقم الهاتف" required>
+    </div>
+
+    <button id="submitOrderBlue" class="submitBtnBlue hide">إرسال الطلب</button>
+  </div>
+
+  <!-- عرض المنتجات -->
+  <div class="productGridBlue">
+    <!-- سنضع هنا 8 منتجات كما في المثال السابق -->
+    <!-- مثال على واحد -->
+    <div class="productCardBlue" data-category="عدد صناعية" onclick="openProductModalBlue('TOTAL','طقم درل شحن 20 فولت مع بطارية عدد2 وشاحن و50 قطعه اكسسورات وخلاط هدية...',65,'Ip/to3.jpg')">
+      <img src="IP/to3.jpg" alt="ماكينة حف اسطح وجدران ماركةTOTAL">
+      <h4>"طقم درل شحن 20 فولت"</h4>
+      <p><span class="oldPrice">د 110</span> <span class="newPrice">65د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('عدد صناعية',65,'ip/to3.jpg')">أضف للسلة</button>
+    </div>
+    <!-- كرر هذا الكود مع تغيير اسم الصورة والتفاصيل للمنتجات 2–8 -->
+
+
+<div class="productCardBlue" data-category="الأدوات الصحية" onclick="openProductModalBlue('يونكا دبل  ','يونكا دبل ماركة altin mix ...',21,'IP/altin.jpg')">
+      <img src="IP/altin.jpg" alt="منتج 1">
+      <h4>يونكا دبل </h4>
+      <p><span class="oldPrice">د 32</span> <span class="newPrice">21 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('الادوات الصحية',21,'IP/altin.jpg')">أضف للسلة</button>
+    </div>
+
+
+
+    <div class="productCardBlue" data-category="الادوات الكهربائية" onclick="openProductModalBlue('وحدة انارة ديكوريه','وحدة انارة ديكوريه ماركة trust كفالة سنة 3الاوان ...',15,'IP/t11.png')">
+      <img src="IP/t11.png" alt="وحدة انارة ديكوريه 1">
+      <h4>وحدة انارة ديكوريه 1</h4>
+      <p><span class="oldPrice">د 25</span> <span class="newPrice">15د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('الادوات الكهربائية',15,'IP/t11.png')">أضف للسلة</button>
+    </div>
+
+
+
+    <div class="productCardBlue" data-category="مضخات" onclick="openProductModalBlue(' WISEUB',' مضخةزراعي 20 لتر مع حمالة على الظهر...',18,'IP/381.png')">
+      <img src="IP/381.png" alt="منتج 1">
+      <h4>مضخةزراعي 20 لتر </h4>
+      <p><span class="oldPrice">19 </span> <span class="newPrice">28 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('مضخات',18,'IP/381.png')">أضف للسلة</button>
+    </div>
+
+
+    <div class="productCardBlue" data-category="عدد صناعية" onclick="openProductModalBlue(' ماركةTOTAL','طقم درل شحن 12 فولت مع 25 قطعه...',32,'IP/P5.jpg')">
+      <img src="IP/P5.jpg" alt="منتج 1">
+      <h4> طقم درل شحن مع طقم ريش 10 قطع</h4>
+      <p><span class="oldPrice">د 32</span> <span class="newPrice">د42</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('عدد صناعية',32,'IP/P5.jpg')">أضف للسلة</button>
+    </div>
+    
+
+
+
+ <div class="productCardBlue" data-category="عدد صناعية" onclick="openProductModalBlue('','ماكينة حف اسطح وجدران ماركةTOTAL...',10,'IMG/DRY.jpg')">
+      <img src="img/DRY.jpg" alt="ماكينة حف اسطح وجدران ماركةTOTAL">
+      <h4>"ماكينة حف اسطح وجدران ماركةTOTAL"</h4>
+      <p><span class="oldPrice">د 110</span> <span class="newPrice">85د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('عدد صناعية',85,'img/Dry.jpg')">أضف للسلة</button>
+    </div>
+    <!-- كرر هذا الكود مع تغيير اسم الصورة والتفاصيل للمنتجات 2–8 -->
+
+
+
+
+
+    <div class="productCardBlue" data-category="الادوات الكهربائية" onclick="openProductModalBlue('وحدة انارة ديكوريه','ثريا ديكوريه كريستال سنة 3الاوان ...',25,'IP/th.jpg')">
+      <img src="IP/th.jpg" alt=" 1">
+      <h4>ثريا كريستال</h4>
+      <p><span class="oldPrice">37 </span> <span class="newPrice">25</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('الادوات الكهربائية',15,'IP/th.jpg')">أضف للسلة</button>
+    </div>
+
+
+
+    <div class="productCardBlue" data-category="مضخات" onclick="openProductModalBlue(' strong','  مضخة ماء واحد حصان ماركة  ملف نحاس...',18,'img/PUMP.png')">
+      <img src="img/PUMP.png" alt="منتج 1">
+      <h4>مضخة ماء واحد حصان</h4>
+      <p><span class="oldPrice">19 </span> <span class="newPrice">28 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('مضخات',18,'img/PUMP.png')">أضف للسلة</button>
+    </div>
+
+
+    
+
+
+
+ 
+  </div>
+
+  <!-- مودال تفاصيل المنتج -->
+  <div id="productModalBlue" class="modalBlue hide">
+    <div class="modalContentBlue">
+      <span class="closeModalBlue" onclick="closeProductModalBlue()">×</span>
+      <img id="modalImgBlue" src="">
+      <h3 id="modalTitleBlue"></h3>
+      <p id="modalDescBlue"></p>
+      <p><strong id="modalPriceBlue"></strong></p>
+      <button id="modalAddBtnBlue"></button>
+    </div>
+  </div>
+
+  <!-- صفحة تأكيد الطلب -->
+  <div id="orderConfirmBlue" class="hide">
+    <h2>تأكيد الطلب</h2>
+    <p>الاسم: <span id="confNameBlue"></span></p>
+    <p>الهاتف: <span id="confPhoneBlue"></span></p>
+    <ul id="confCartListBlue"></ul>
+    <p>الإجمالي: <span id="confTotalBlue"></span> د</p>
+    <button onclick="sendOrderToWhatsAppBlue()">تأكيد الإرسال</button>
+  </div>
+</section>
+
+<section class="content1" id="about">
+     
+<div class="it">
+
+<h5>من نحن</h5>
+<h6>مؤسسة أبو عكرمة لمواد البناء هي إحدى الشركات الرائدة في الأردن في مجال توريد العدد الصناعية واليدوية عالية الجودة. تأسست شركتنا على أسس راسخة من الثقة والجودة والخدمة المتميزة.</h6>
+<h4>نحن نؤمن بأن جودة الأدوات هي أساس نجاح أي مشروع، لذلك نحرص على انتقاء أفضل المنتجات من موردين معتمدين وماركات عالمية موثوقة.</h4>
+
+</svg>
+
+<li>جودة مضمونة
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1);" ></i>
+
+
+
+
+</li>
+<li>أسعار تنافسية
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1)"></i></li>
+<li>خدمة عملاء متميزة
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1);"></i></li>
+<li>توصيل سريع
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1);"></i></li>
+
+
+</div>
+<div class="ib">
+
+
+<i     class="fa-regular fa-heart fa-2xl" style="color:  #ffffff  " ;></i>
+    <img  src="img/moon.jpg" alt="about">
+</div>
+</section>
+
+
+
+
+
+
+<section id="sli">
+
+   <div class="cont">
+<div class="cont-content">
+<div class="cont-info">
+<div>
+
+    <h3>العنوان</h3>
+<p><i class="fa-solid  fa-location-dot"></i>الاردن.اربد.ش.الامير محمد.بلقرب من مستشفى الاميرة بديعه</p>
+<p><i class="fa-solid  fa-phone"></i>الهاتف:+962772413026</p>
+<p><i class="fa-solid  fa-envelope"></i>ikremham@gmail.com</p>
+</div>
+<div>
+
+<h3>اوقات العمل</h3>
+<p>8:00 am to 11:00 pm on allweekday</p>
+</div>
+<div>
+<h3>تواصل معنا</h3>
+<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+<a href=""><i class="fa-brands fa-instagram"></i></a>
+<a href=""><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+</div>
+<form id="form">
+    <input type="text" name="name" id="name" placeholder="الاسم بلكامل" required>
+    <input type="email" name="name" id="name" placeholder="الايميل  " required>
+    <input type="text" name="sub" id="sub" placeholder="الموضوع " required>
+<textarea name="message" id="message" cols="30" rows="5" placeholder="الرساله"></textarea>
+<button type="submit" class="btn">ارسال</button>
+</form>
+</div>
+</div>
+<footer id="footer1">
+    <div class="box footer">
+    <p>Copyright &copy; 2025 all rights reserved | made by ikremh Altoubat</p>
+</div>
+</footer>
+</section>
+
+<script src="main.js"></script>
+</body>
+</htm

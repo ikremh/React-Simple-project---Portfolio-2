@@ -1,0 +1,184 @@
+/* 
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+     font-family: "Open Sans", sans-serif;
+}
+.main{
+    min-height: 100vh;
+   
+    padding: 10px;
+    
+    background:url("background\ pincel.png")center/cover ;
+    background-size: 100% 200%;
+}
+.main h2{
+    color: #333;
+margin-left: 300px;
+font-size: 25px;
+}
+.task{
+background-color: rgba(255, 255, 255, 0);
+max-width: 580px;
+border-radius: 10px;
+margin-left:600px ;
+
+
+}
+
+.task .title{
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+
+}
+.task .row{
+    display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 25px;
+
+
+}
+.task .row input{
+    background-color: #05297200;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 70%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.task .row .btn{
+    border: none;
+    background-color: #ac854b;
+    padding: 12px 30px;
+    border-radius: 999px;
+    color: white;
+    cursor: pointer;
+}
+.task ul li {
+font-size: 18px;
+padding: 12px 8px 12px 50px;
+list-style: none;
+position: relative;
+
+}
+.task ul li span{
+
+position: absolute;
+right: 200px;
+top: 5px;
+cursor: pointer;
+text-align: center;
+font-size: 25px;
+
+}
+
+.task ul li.check{
+text-decoration: line-through;
+color:#06e90d;
+
+
+
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main {
+  width: 100%;
+  max-width: 700px;
+}
+
+.task {
+  background: url("./background\ pincel.png") top center no-repeat;
+  background-size: 1000% 100%;
+  border-radius: 10px;
+  padding: 30px;
+  min-height: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.task .title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.task h2 {
+  color: #2c2c2c;
+  font-size: 24px;
+}
+
+.task .row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task .row input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.task .row .btn {
+  background-color: #ac854b;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task .row .btn:hover {
+  background-color: #8c6a3e;
+}
+
+.task ul li {
+  font-size: 18px;
+  padding: 10px;
+  list-style: none;
+  color: #2a2a2a;
+  font-family: "Caveat", cursive; /* خط يدوي */
+  background: transparent;
+}
+
+.task ul li span {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.task ul li.check {
+  text-decoration: line-through;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .task .row {
+    flex-direction: column;
+  }
+  .task .row input,
+  .task .row .btn {
+    width: 100%;
+  }
+}
