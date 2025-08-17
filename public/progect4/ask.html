@@ -1,0 +1,457 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="storemn.css">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+html{
+   scroll-behavior: smooth;
+}
+body{
+     font-family: "Quicksand", sans-serif;
+
+    }
+ul{
+list-style: none; /**/
+
+}
+a{
+
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fa-regular{
+
+font-size: 80px;
+margin: 30px 30px;
+padding: 70px 20px;
+position: absolute;
+
+
+
+}
+.fa-heart{
+
+background: blue;
+width: 10%;
+height: 15%;
+border: #135a91;
+border-radius: 9999px;
+}
+
+small{
+
+font-size: 60px;
+
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+color: #135a91;
+
+}
+h2{
+text-align: center;
+    color: darkgray;
+}
+
+
+#eng{
+position: relative;
+margin-left: 120px;
+width: 100px;
+height: 50px;
+bottom: 140px;
+border-radius: 9999px;
+border: 1px solid rgba(20, 33, 218, 0.603);
+background-color: #135a9100;
+color: #141313;
+font-size: large;
+
+}
+#eng:hover{
+
+background-color: #135a915d;
+
+
+}
+header::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: rgba(74, 75, 77, 0.473);
+}
+header *{
+z-index: 10;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*utilitty clases*/
+.primary-text{
+    color: rgb(59 130 246 / 1)
+}
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+}
+.btn-primary{
+    color: aliceblue;
+    border: 1px solid rgb(59 130 246 / .5);
+    margin-right: 50px;
+}
+.btn-primary:hover{
+    background-color:rgb(59 130 246 / .5);
+
+}
+
+#navbar img{
+width: 100px;
+margin-left: 100px;
+margin-top: 30px;
+display: flex;
+
+}
+#navbar{
+    display: flex;/*يضعهم الذي بداخله بجانب بعض*/
+    justify-content: space-between; 
+    ;
+    align-items: center;
+
+}
+#navbar ul{
+    display: flex;
+    margin-right: 100px;
+
+}
+#navbar ul li a{
+
+    padding: 15px 20px;
+    color: aliceblue;
+    font-weight: 600;
+}
+#navbar ul li a:hover{
+border-bottom: 2px solid rgb(59 130 246 / .5);
+}
+header{
+    height: 40vh;
+ position: relative;
+    background: url(img/serv2.jpg) center center/cover no-repeat;
+    background-size:100% 100%;
+
+
+}
+
+
+
+
+
+
+/**********************************/
+
+
+h4{
+
+width: 100%;
+height: 100%;
+
+}
+ h4 img{
+position: absolute;
+margin-right: 1000%;
+    width: 50vh;
+    height: 50vh;
+    cursor: pointer;
+    bottom: -10%;
+   
+}
+h4 img:hover{
+
+scale: 1.1;
+background-color: #007bff00;
+border-radius: 99999px;
+
+
+
+}
+
+#navbar{
+
+
+    height: 30px;
+   
+}
+h3 img{
+
+width: 30%;
+height: 30%;
+margin-left: 500px;
+}
+
+
+    </style>
+
+
+
+<style>
+
+
+
+/*contect*/
+section #sli{
+   
+    
+}
+
+#sli{
+
+    padding: 5rem 0;
+background:rgba(5, 7, 29, 0.938);
+
+}
+#sli .cont{
+max-width: 900vh;
+margin:0 100px;
+}
+#sli .cont-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sli .cont-content .cont-info{
+
+width: 50%;
+
+}
+#sli .cont-content .cont-info div{
+
+
+margin: 30px 0;
+line-height: 1.7;
+
+}
+#sli .cont-content .cont-info h3{
+
+    font-size: 28px;
+    color: #e9dcdc;
+    margin-bottom: 10px;
+}
+#sli .cont-content .cont-info p{
+    color: #979393;
+}
+#sli .cont-content .cont-info i{
+
+   color: rgb(59 130 246 / 1);
+   margin-right:10px ;
+}
+#sli .cont-content .cont-info a i{
+
+    color: #fff;
+    background-color:rgb(59 130 246 / 1);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+#sli .cont-content .cont-info a i:hover{
+    background-color: rgb(59 130 246 / 1);
+    color: #2e2323;
+}
+form{
+    width: 50%;
+
+}
+
+  
+
+form input,
+textarea{
+padding: 20px 15px;
+margin: 20px 0;
+width: 100%;
+    display: block;
+    border: none;
+    background-color: #e3e2dd;
+    border-radius: 5px;
+}
+#sli .btn{
+    background:rgb(59 130 246 / 1);
+    color: #fff;
+}
+#sli .btn:hover{
+    background-color: rgb(59 130 246 / 1);
+    cursor: pointer;
+}
+.copy{
+
+
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+  <body onLoad="slideit(0)">
+
+
+     
+<section>
+
+    <header>        <div class="container">
+<div class="box head">
+    <!--header start-->
+<div id="navbar">
+    
+<img src="img/logo.png" alt="logo">
+<div class="contanier">
+<ul>
+<li>
+<a href="#home">الرئيسية</a>
+<a href="#proudct">المنتجات</a>
+<a href="#about">من نحن</a>
+<a href="#gallery">شركائنا</a>
+<a href="#sli ">تواصل معنا</a>
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section>
+
+        <main>
+
+
+<section class="parallax-effect bg-img-1">
+
+             
+
+                    <small>نتواجد في كل وقت للرد على أسئلتكم واستفساراتكم عبر الواتس آب</small>
+
+
+
+				 
+                <h2>لا تتردد في التواصل والسؤال</h2>
+<h2>للتواصل مع قسم الخبراء امسح الكود للتواصل من خلال الواتس اب نتشرف بخدمتكم</h2>
+          
+
+<h3><img src="img/qr.png" alt="" srcset=""></h3>
+
+<h4 >
+
+
+  <img  src="img/logo2.PNG" alt="" srcset="">
+<button     id="eng"><a href=""></a>اتصل الان</button>
+
+</h4>
+
+
+
+
+
+<section id="sli">
+
+   <div class="cont">
+<div class="cont-content">
+<div class="cont-info">
+<div>
+
+    <h3>العنوان</h3>
+<p><i class="fa-solid  fa-location-dot"></i>الاردن.اربد.ش.الامير محمد.بلقرب من مستشفى الاميرة بديعه</p>
+<p><i class="fa-solid  fa-phone"></i>الهاتف:+962772413026</p>
+<p><i class="fa-solid  fa-envelope"></i>ikremham@gmail.com</p>
+</div>
+<div>
+
+<h3>اوقات العمل</h3>
+<p>8:00 am to 11:00 pm on allweekday</p>
+</div>
+<div>
+<h3>تواصل معنا</h3>
+<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+<a href=""><i class="fa-brands fa-instagram"></i></a>
+<a href=""><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+</div>
+<form id="form">
+    <input type="text" name="name" id="name" placeholder="الاسم بلكامل" required>
+    <input type="email" name="name" id="name" placeholder="الايميل  " required>
+    <input type="text" name="sub" id="sub" placeholder="الموضوع " required>
+<textarea name="message" id="message" cols="30" rows="5" placeholder="الرساله"></textarea>
+<button type="submit" class="btn">ارسال</button>
+</form>
+</div>
+</div>
+<footer id="footer1">
+    <div class= "copy">
+    <p>Copyright &copy; 2025 all rights reserved | made by ikremh Altoubat</p>
+</div>
+</footer>
+</section>
+
+			
+
+		
+</body>
+<script src="main.js"></script>
+</html>

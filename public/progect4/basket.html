@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>سلة المشتريات</title>
+  <link rel="stylesheet" href="storemain.css">
+</head>
+<style>
+
+
+
+</style>
+<body>
+
+<style>
+
+
+.drop{
+
+    width: 120px;
+    height: 30vh;
+background-color:rgb(236, 235, 230) ;
+color: black;
+}
+.drop p{
+    padding: 5px;
+text-align: center;
+font-size: 20px;
+}
+.drop p:hover ,button:hover
+{
+
+    background-color: rgb(233, 233, 238);
+    cursor: pointer;
+}
+button
+
+{
+
+background-color: rgb(237, 243, 243);
+color: black;
+border: none;
+border-radius: 5px;
+
+}
+button img{
+font-size: 50px;
+		 content: '';
+    position: absolute;
+    top: 90px;
+    left: -30px;
+   
+    height: 100px;
+    width: 100px;
+   
+}
+#btclose{
+    position: absolute;
+    left: 125px;
+}
+.hide{
+    display: none;
+}
+
+
+.fa-regular{
+
+font-size: 80px;
+margin: 30px 30px;
+padding: 70px 20px;
+position: absolute;
+
+
+
+}
+.fa-heart{
+
+background: blue;
+width: 10%;
+height: 15%;
+border: #135a91;
+border-radius: 9999px;
+}
+
+#search{
+display: inline-block;
+   
+width: 26%;
+    height: 290%;
+    border: none;
+    background-color: #56555842;
+    border-radius: 19px;
+    border-color: rgba(242, 240, 248, 0.322);
+    color: #ffffff;
+
+      border: 1px solid rgb(59 130 246 / .5);
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+  
+
+
+    <header>        <div class="container">
+<div class="box head">
+    <!--header start-->
+<div id="navbar">
+    
+<img src="img/logo.png" alt="logo">
+<div class="contanier">
+<ul>
+<li>
+    <input type="search" name="search" id="search" placeholder="ابحث عن المنتجات">
+<a href="#home">الرئيسية</a>
+<a href="#about">المنتجات</a>
+<a href="#menu#">من نحن</a>
+<a href="#gallery">شركائنا</a>
+<a href="#cont ">تواصل معنا</a>
+
+</li>
+</ul>
+</div>
+</div>
+
+<div class="content">
+<h1>مرحبا بكم في   <span class="primary-text">مؤسسة ابو عكرمة</span>  للتطوير العقاري ومواد البناء</h1>
+<p>هنا ستجد خيارك الامثل في مواد البناء والعقارات</p>
+<a href="#" class="btn btn-primary">اسأل الخبير</a>
+</div></div>
+    </div>
+</header>
+
+  <!-- أيقونة السلة -->
+  <div class="cartIconBlue" id="cartIconBlue">
+    🛒 <span id="itemCountBlue">0</span>
+  </div>
+
+  <!-- سلة المشتريات -->
+  <div class="shoppingCartBlue" id="shoppingCartBlue">
+    <h3>سلة المشتريات</h3>
+    <table id="cartTableBlue">
+      <thead>
+        <tr>
+          <th>المنتج</th>
+          <th>السعر</th>
+          <th>حذف</th>
+        </tr>
+      </thead>
+      <table id="cartTableBlue">
+  <thead>
+    <tr>
+      <th><img src="" alt="">صورة</th>
+      <th>المنتج</th>
+      <th>السعر</th>
+      <th>حذف</th>
+    </tr>
+  </thead>
+  <tbody id="cartBodyBlue"></tbody>
+</table>
+      <tbody id="cartBodyBlue"></tbody>
+    </table>
+
+    <div class="totalSectionBlue">المجموع: <span id="totalAmountBlue">0</span> دينار</div>
+
+    <!-- نموذج معلومات المستخدم -->
+    <div class="formSectionBlue">
+      <input type="text" id="clientNameBlue" placeholder="الاسم" required>
+      <input type="tel" id="clientPhoneBlue" placeholder="رقم الهاتف" required>
+    </div>
+
+    <!-- زر الإرسال -->
+    <button id="submitOrderBlue" class="submitBtnBlue hide">إرسال الطلب</button>
+  </div>
+
+  <!-- منتجات تجريبية -->
+  <div class="productListBlue">
+    <div class="productBoxBlue">
+      <h4>منتج A</h4>
+      <p>السعر: 12 دينار</p>
+      <button onclick="addItemToCartBlue('منتج A', 12)">أضف للسلة</button>
+    </div>
+    <div class="productBoxBlue">
+      <h4>منتج B</h4>
+      <p>السعر: 20 دينار</p>
+      <button onclick="addItemToCartBlue('منتج B', 20)">أضف للسلة</button>
+    </div>
+  </div>
+<div class="productBoxBlue">
+  <img src="product-a.jpg" alt="منتج A" class="productImageBlue">
+  <h4>منتج A</h4>
+  <p>السعر: 12 دينار</p>
+  <button onclick="addItemToCartBlue('منتج A', 12, 'product-a.jpg')">أضف للسلة</button>
+</div>
+
+ <section class="content1">
+     
+<div class="it">
+
+<h5>من نحن</h5>
+<h6>مؤسسة أبو عكرمة لمواد البناء هي إحدى الشركات الرائدة في الأردن في مجال توريد العدد الصناعية واليدوية عالية الجودة. تأسست شركتنا على أسس راسخة من الثقة والجودة والخدمة المتميزة.</h6>
+<h4>نحن نؤمن بأن جودة الأدوات هي أساس نجاح أي مشروع، لذلك نحرص على انتقاء أفضل المنتجات من موردين معتمدين وماركات عالمية موثوقة.</h4>
+
+</svg>
+
+<li>جودة مضمونة
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1);" ></i>
+
+
+
+
+</li>
+<li>أسعار تنافسية
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1)"></i></li>
+<li>خدمة عملاء متميزة
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1);"></i></li>
+<li>توصيل سريع
+<i class="fa-solid fa-check fa-flip-horizontal fa-2xs" style="color: rgb(59 130 246 / 1);"></i></li>
+
+
+</div>
+<div class="ib">
+
+
+<i     class="fa-regular fa-heart fa-2xl" style="color:  #ffffff  " ;></i>
+    <img src="img/serv5.jpg" alt="about">
+</div>
+</section>
+
+
+
+
+
+
+<section id="sli">
+
+   <div class="cont">
+<div class="cont-content">
+<div class="cont-info">
+<div>
+
+    <h3>العنوان</h3>
+<p><i class="fa-solid  fa-location-dot"></i>الاردن.اربد.ش.الامير محمد.بلقرب من مستشفى الاميرة بديعه</p>
+<p><i class="fa-solid  fa-phone"></i>الهاتف:+962772413026</p>
+<p><i class="fa-solid  fa-envelope"></i>ikremham@gmail.com</p>
+</div>
+<div>
+
+<h3>اوقات العمل</h3>
+<p>8:00 am to 11:00 pm on allweekday</p>
+</div>
+<div>
+<h3>تواصل معنا</h3>
+<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+<a href=""><i class="fa-brands fa-instagram"></i></a>
+<a href=""><i class="fa-brands fa-twitter"></i></a>
+
+</div>
+</div>
+<form id="form">
+    <input type="text" name="name" id="name" placeholder="الاسم بلكامل" required>
+    <input type="email" name="name" id="name" placeholder="الايميل  " required>
+    <input type="text" name="sub" id="sub" placeholder="الموضوع " required>
+<textarea name="message" id="message" cols="30" rows="5" placeholder="الرساله"></textarea>
+<button type="submit" class="btn">ارسال</button>
+</form>
+</div>
+</div>
+<footer id="footer1">
+    <div class="box footer">
+    <p>Copyright &copy; 2025 all rights reserved | made by ikremh Altoubat</p>
+</div>
+</footer>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

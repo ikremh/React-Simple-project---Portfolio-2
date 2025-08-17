@@ -1,40 +1,44 @@
-import React from 'react';
+import React from "react";
+import { Card } from "react-bootstrap";
+
 
 function Projects() {
   const projects = [
     {
-      title: `Developed a custom warehouse management web application for a company using
-JavaScript and SQL. The system allows for the entry of all products, including their prices,
-applicable taxes, and discounts, to automatically calculate the final product cost. The applicatio
-also supports adding products to the inventory, streamlining stocktaking and inventory
-management processes.`,
-     
+      title: "Warehouse Management Web Application",
+      description: `Developed a custom warehouse management web application for a company 
+using JavaScript and SQL. The system allows for product entry with prices, taxes, and discounts, 
+automatically calculating the final cost. It also supports inventory management and stocktaking.`,
     },
     {
-      title: `Designed and developed a fully functional website for a construction materials
-store,
-featuring an integrated e-commerce system that allows users to browse all available products,
-select desired items, and forward their selections to the sales department. The website also
-includes a dedicated section for showcasing residential housing and apartments. The project wa
-built using HTML, CSS, and JavaScript.`,
-    
-    }
+      title: "Construction Materials Store Website",
+      description: `Designed and developed a fully functional e-commerce website for a 
+construction materials store. It features product browsing, shopping cart, and a section for 
+residential housing/apartment showcases. Built with HTML, CSS, and JavaScript.`,
+    },
   ];
 
   return (
-    <section className="container" aria-label="Projects Section " id='section5'>
-      <h2 className="mb-4">Projects</h2>
-      {projects.map((project, i) => (
-        <div key={i} className="mb-3">
-          <h5>{project.title}</h5>
-        
-        </div>
-      ))}
+    <section className="container" aria-label="Projects Section" id="section5">
+      <h2 className="mb-4 text-center fw-bold">Projects</h2>
+      <div className="row">
+        {projects.map((project, i) => (
+          <div key={i} className="col-md-6 mb-4">
+            <Card className="project-card shadow-sm h-100 bg-dark text-light">
+              <Card.Body>
+                <Card.Title className="project-title text-success">
+                  {project.title}
+                </Card.Title>
+                <Card.Text className="project-description">
+                  {project.description}
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
 
 export default Projects;
-
-
-

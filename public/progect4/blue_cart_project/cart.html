@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>سوقك الأزرق – المتجر</title>
+  <link rel="stylesheet" href="blue-cart.css">
+</head>
+<body onload="updateCategoryCountsBlue(); applyCombinedFiltersBlue();">
+
+  <!-- زر الأقسام -->
+  <div class="categoryMenuWrapperBlue">
+    <button id="toggleCategoryMenuBlue">📂 الأقسام</button>
+    <ul id="categoryListBlue" class="categoryListBlue hide"></ul>
+  </div>
+
+  <!-- الفلاتر -->
+  <div class="filterBarBlue">
+    <label>الفئة:</label>
+    <select id="categoryFilterBlue" onchange="applyCombinedFiltersBlue()">
+      <option value="all">الكل</option>
+      <option value="الكترونيات">📱 إلكترونيات</option>
+      <option value="ملابس">👕 ملابس</option>
+      <option value="منزل">🏠 منزل</option>
+    </select>
+
+    <label>السعر:</label>
+    <select id="priceFilterBlue" onchange="applyCombinedFiltersBlue()">
+      <option value="all">الكل</option>
+      <option value="lt10">أقل من 10 د</option>
+      <option value="10to15">10 - 15 د</option>
+      <option value="gt15">أكثر من 15 د</option>
+    </select>
+  </div>
+
+  <!-- عداد عدد المنتجات -->
+  <div id="productCountBlue" class="productCountBlue">  <span id="visibleCountBlue">0</span></div>
+
+  <!-- أيقونة السلة -->
+  <div class="cartIconBlue" id="cartIconBlue">
+    🛒 <span id="itemCountBlue"></span>
+  </div>
+
+  <!-- سلة المشتريات -->
+  <div class="shoppingCartBlue" id="shoppingCartBlue">
+    <h3>سلة المشتريات</h3>
+    <table id="cartTableBlue">
+      <thead>
+        <tr><th>صورة</th><th>منتج</th><th>السعر</th><th>حذف</th></tr>
+      </thead>
+      <tbody id="cartBodyBlue"></tbody>
+    </table>
+    <div class="totalSectionBlue">الإجمالي: <span id="totalAmountBlue">0</span> د</div>
+    <div class="formSectionBlue">
+      <input type="text" id="clientNameBlue" placeholder="الاسم" required>
+      <input type="tel" id="clientPhoneBlue" placeholder="رقم الهاتف" required>
+    </div>
+    <button id="submitOrderBlue" class="submitBtnBlue hide">إرسال الطلب</button>
+  </div>
+
+  <!-- شبكة المنتجات -->
+  <div class="productGridBlue">
+    <!-- مثال 8 منتجات -->
+    <div class="productCardBlue" data-category="الكترونيات" onclick="openProductModalBlue('منتج 1', 'وصف المنتج رقم 1', 6, 'images/prod1.jpg')">
+      <img src="images/prod1.jpg" alt="منتج 1">
+      <h4>منتج 1</h4>
+      <p><span class="oldPrice">8 د</span> <span class="newPrice">6 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 1', 6, 'images/prod1.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="الكترونيات" onclick="openProductModalBlue('منتج 2', 'وصف المنتج رقم 2', 7, 'images/prod2.jpg')">
+      <img src="images/prod2.jpg" alt="منتج 2">
+      <h4>منتج 2</h4>
+      <p><span class="oldPrice">9 د</span> <span class="newPrice">7 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 2', 7, 'images/prod2.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="ملابس" onclick="openProductModalBlue('منتج 3', 'وصف المنتج رقم 3', 8, 'images/prod3.jpg')">
+      <img src="images/prod3.jpg" alt="منتج 3">
+      <h4>منتج 3</h4>
+      <p><span class="oldPrice">10 د</span> <span class="newPrice">8 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 3', 8, 'images/prod3.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="ملابس" onclick="openProductModalBlue('منتج 4', 'وصف المنتج رقم 4', 9, 'images/prod4.jpg')">
+      <img src="images/prod4.jpg" alt="منتج 4">
+      <h4>منتج 4</h4>
+      <p><span class="oldPrice">11 د</span> <span class="newPrice">9 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 4', 9, 'images/prod4.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="ملابس" onclick="openProductModalBlue('منتج 5', 'وصف المنتج رقم 5', 10, 'images/prod5.jpg')">
+      <img src="images/prod5.jpg" alt="منتج 5">
+      <h4>منتج 5</h4>
+      <p><span class="oldPrice">12 د</span> <span class="newPrice">10 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 5', 10, 'images/prod5.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="منزل" onclick="openProductModalBlue('منتج 6', 'وصف المنتج رقم 6', 11, 'images/prod6.jpg')">
+      <img src="images/prod6.jpg" alt="منتج 6">
+      <h4>منتج 6</h4>
+      <p><span class="oldPrice">13 د</span> <span class="newPrice">11 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 6', 11, 'images/prod6.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="منزل" onclick="openProductModalBlue('منتج 7', 'وصف المنتج رقم 7', 12, 'images/prod7.jpg')">
+      <img src="images/prod7.jpg" alt="منتج 7">
+      <h4>منتج 7</h4>
+      <p><span class="oldPrice">14 د</span> <span class="newPrice">12 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 7', 12, 'images/prod7.jpg')">أضف للسلة</button>
+    </div>
+    <div class="productCardBlue" data-category="منزل" onclick="openProductModalBlue('منتج 8', 'وصف المنتج رقم 8', 13, 'images/prod8.jpg')">
+      <img src="images/prod8.jpg" alt="منتج 8">
+      <h4>منتج 8</h4>
+      <p><span class="oldPrice">15 د</span> <span class="newPrice">13 د</span></p>
+      <button onclick="event.stopPropagation(); addItemToCartBlue('منتج 8', 13, 'images/prod8.jpg')">أضف للسلة</button>
+    </div>
+  </div>
+
+  <!-- مودال المنتج -->
+  <div id="productModalBlue" class="modalBlue hide">
+    <div class="modalContentBlue">
+      <span class="closeModalBlue" onclick="closeProductModalBlue()">×</span>
+      <img id="modalImgBlue" src="">
+      <h3 id="modalTitleBlue"></h3>
+      <p id="modalDescBlue"></p>
+      <p><strong id="modalPriceBlue"></strong></p>
+      <button id="modalAddBtnBlue"></button>
+    </div>
+  </div>
+
+  <!-- صفحة تأكيد الطلب -->
+  <div id="orderConfirmBlue" class="hide">
+    <h2>تأكيد الطلب</h2>
+    <p>الاسم: <span id="confNameBlue"></span></p>
+    <p>الهاتف: <span id="confPhoneBlue"></span></p>
+    <ul id="confCartListBlue"></ul>
+    <p>الإجمالي: <span id="confTotalBlue"></span> د</p>
+    <button onclick="sendOrderToWhatsAppBlue()">تأكيد الإرسال</button>
+  </div>
+
+  <script src="blue-cart.js"></script>
+</body>
+</html>

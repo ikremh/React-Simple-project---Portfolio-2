@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="data.css">
+
+</head>
+
+<body>
+    <div class="cr" id="crd"></div>
+<div id="head">
+<h2>نظام المستودعات</h2>
+<p>قاعدة بيانات التخزين</p>
+</div>
+
+<div class="inputs">
+    <input placeholder="title" id="title" type="text">
+<div class="price">
+<input onkeyup="gettotal() " placeholder="السعر" id="price" type="number">
+<input  onkeyup="gettotal() " placeholder="الضرائب" id="taxes" type="number">
+<input  onkeyup="gettotal() " placeholder="الاعلانات" id="ads" type="number">
+<input  onkeyup="gettotal() " placeholder="الخصم" id="discount" type="number">
+<small id="total"></small>
+</div></div>
+    <input placeholder="count" id="count" type="count">
+ <input placeholder="category" id="category" type="text">
+<button id="submit">انشاء</button>
+
+</div>
+<div class="output">
+    <div class="searchblock">
+<input onkeyup="searchdata(this.value)" id="search" type="text" placeholder="search">
+<div class="btnsearch">
+
+<button onclick="getsearchmood(this.id)" id="searchtitle">search by title</button>
+<button onclick="getsearchmood(this.id)" id="searchcatgory">search by catgory</button>
+
+</div>
+<div id="deleteall"></div>
+<table>
+
+<tr>
+
+<th>id</th>
+<th>title</th>
+<th>price</th>
+<th>taxes</th>
+<th>ads</th>
+<th>discount</th>
+<th>total</th>
+<th>category</th>
+
+
+<th>delete</th>
+<th>update</th>
+
+</tr>
+
+
+<tbody id="tbody">
+
+</tbody>
+
+
+</table>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+<script src=" main.js"></script>
+
+
+
+
+
+</html>
